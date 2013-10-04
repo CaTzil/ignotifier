@@ -216,6 +216,13 @@ var update = (function() {
       body.date = prettyDate(entry.modified);
       body.content = entry.summary + " ...";
       _tag[selectedAccount] = entry.id;
+      
+      //Support for the RTL
+      var dir = window.getComputedStyle($("email_title"), null).direction;	
+      if(dir == "rtl")
+            $("content").classList.add("rtl");
+      else
+            $("content").classList.remove("rtl");
     }
     var doBody = !_tag[selectedAccount] || doAccountSelector || doNext || doPrevious;
     // Make sure selected item is still available

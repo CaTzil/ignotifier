@@ -77,7 +77,7 @@ ul
   cursor: pointer;
   float: left;
   padding: 0 8px 0 18px;
-  background: url(icons2.png) -1px 2px no-repeat;
+  background: url(icons.png) -1px 2px no-repeat;
   height: 25px;
   outline: none;
 }
@@ -89,7 +89,7 @@ ul
 
 #header #account_selector span
 {
-  background: url(icons2.png) 100% -19px no-repeat;
+  background: url(icons.png) 100% -19px no-repeat;
   padding: 0 20px 0 5px;
   overflow: hidden;
   display: block;
@@ -132,7 +132,7 @@ ul
 
 #header #accounts li.selected
 {
-  background: url(icons2.png) 2px -196px no-repeat;
+  background: url(icons.png) 2px -196px no-repeat;
 } 
 
 #content
@@ -285,7 +285,7 @@ ul
 }
 .btn i
 {
-  background: url(icons2.png) 0 0 no-repeat;
+  background: url(icons.png) 0 0 no-repeat;
   display: inline-block;
   opacity: 0.55;
   width: 20px;
@@ -376,4 +376,25 @@ ul
   left: 38%;
   position: absolute;
   z-index: 99;
+}
+/* rtl support */
+#content.rtl .sender {
+	float: right;
+}
+#content.rtl .sender a {
+	float: right;
+	margin-left: 5px;
+}
+#content.rtl .sender span {
+	direction: ltr;
+}
+
+#content.rtl #date {
+	float: left;
+	direction: ltr;
+}
+
+#content.rtl #email_body,
+#content.rtl #email_title {
+	text-align: right;
 }
